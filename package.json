@@ -1,0 +1,26 @@
+{
+  "name": "unit-test-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alexandra Atzl <aatzl@bn.co>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "jest": "^27.3.1"
+  },
+  "jest": {
+    "verbose": true,
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "dependencies": {}
+}
