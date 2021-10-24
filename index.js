@@ -1,7 +1,9 @@
+const RESTRICTED = [ 'wtf',  '@$$', 'blahblah' ];
 
 export function checkForRestrictedWords(inputStr)  {
-  if ((inputStr.indexOf('wtf') >= 0) || (inputStr.indexOf('@$$') >= 0 || inputStr.indexOf('blahblah') >= 0)) {
-    return true;
-  }
-  return false;
+  const found = RESTRICTED.filter(word => {
+    return inputStr.indexOf(word) >= 0;
+  });
+
+  return found.length > 0;
 }
