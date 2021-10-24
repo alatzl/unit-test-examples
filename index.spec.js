@@ -10,4 +10,9 @@ describe('Restricted Word Checker', () => {
     const response = checkForRestrictedWords('no bad words here');
     expect(response).toEqual(false);
   });
+
+  it("should return true if the string contains 'wft'", () => {
+    const response = checkForRestrictedWords('test wtf test');
+    expect(response).toEqual(true);
+  });
 });
