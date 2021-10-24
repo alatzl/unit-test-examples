@@ -11,8 +11,13 @@ describe('Restricted Word Checker', () => {
     expect(response).toEqual(false);
   });
 
-  it("should return true if the string contains 'wft'", () => {
+  it("should return true if the string contains 'wtf'", () => {
     const response = checkForRestrictedWords('test wtf test');
+    expect(response).toEqual(true);
+  });
+
+  it("should return true if the string contains '@$$'", () => {
+    const response = checkForRestrictedWords('you should not say @$$');
     expect(response).toEqual(true);
   });
 });
