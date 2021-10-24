@@ -20,4 +20,9 @@ describe('Restricted Word Checker', () => {
     const response = checkForRestrictedWords('you should not say @$$');
     expect(response).toEqual(true);
   });
+
+  it("should return true if the string contains 'blahblah'", () => {
+    const response = checkForRestrictedWords('test blahblah  test');
+    expect(response).toEqual(true);
+  });
 });
